@@ -128,7 +128,9 @@ const Editor = () => {
   const [actualColorIndex, setActualColorIndex] = useState(0);
 
   //imgsCard
-  const [image, setImage] = useState(actualProj.image ? actualProj.image : "");
+  const [image, setImage] = useState(
+    actualProj.image ? actualProj.image : "/public/Images/NewProject.png"
+  );
 
   //
 
