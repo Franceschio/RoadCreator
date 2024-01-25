@@ -10,7 +10,6 @@ import DraggableShape from "../../components/draggableShape/DraggableShape";
 import DraggableText from "../../components/draggableText/DraggableText";
 import ItemsList from "../../components/itemsList/ItemsList";
 import ColorsList from "../../components/colorsList/ColorsList";
-import DraggableImage from "../../components/draggableImage/DraggableImage";
 
 const Editor = () => {
   //Navigazione
