@@ -129,7 +129,7 @@ const Editor = () => {
 
   //imgsCard
   const [image, setImage] = useState(
-    actualProj.image ? actualProj.image : "/public/Images/New-project.png"
+    actualProj.image ? actualProj.image : "../../public/Images/New-project.png"
   );
 
   //
