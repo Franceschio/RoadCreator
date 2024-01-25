@@ -1,0 +1,57 @@
+@import "../../utils/styles/variables.scss";
+
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid;
+  border-bottom-color: $border;
+  z-index: 300;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+
+  .title {
+    color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.3em;
+    height: 50px;
+    width: 280px;
+  }
+
+  .title h1 {
+    height: 100%;
+    width: 85%;
+  }
+
+  .titleIcon {
+    width: 30%;
+    height: 100%;
+    margin-top: 5px;
+  }
+
+  .titleIcon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    padding: 30px 20px;
+
+    .listTitle {
+      font-size: 2.3em;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .titleIcon {
+    display: none;
+  }
+}

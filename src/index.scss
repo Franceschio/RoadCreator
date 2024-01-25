@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+@import "../utils/styles/variables.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Salsa";
+  color: $mainColor;
+}
+
+body {
+  min-height: 100dvh;
+}

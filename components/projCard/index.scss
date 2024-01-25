@@ -1,0 +1,135 @@
+@import "../../utils/styles/variables.scss";
+
+.projCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 4px;
+  font-weight: 100;
+  transition: 0.8s;
+  font-size: 0.8em;
+  z-index: 200;
+  position: relative;
+
+  &:hover {
+    color: $mainColor;
+    transform: scale(1.04);
+  }
+
+  .project {
+    border: 1px solid #b2b2b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    height: 100px;
+    width: 150px;
+    border-radius: 8px;
+    transition: 0.8s;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+
+    .projectImg {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .dropBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    background-color: #6c757d90;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px 6px 8px;
+    color: white;
+    transition: 0.8s;
+
+    &:hover {
+      background-color: #5a6268;
+    }
+
+    .dropdownContent {
+      flex-direction: column;
+      position: absolute;
+      border: 1px solid #b866b5;
+      font-size: 0.7em;
+      text-align: center;
+      top: 25px;
+      background-color: #6c757d;
+      min-width: 80px;
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: 0.8s;
+      transform-origin: top right;
+
+      .cardOption {
+        width: 100%;
+        transition: 0.8s;
+        cursor: pointer;
+        border: 1px 0px;
+        border-color: #b2b2b2;
+        padding: 10px 0;
+        color: white;
+
+        &:hover {
+          background-color: #7c8593;
+        }
+      }
+
+      .deleteOption {
+        background-color: red;
+
+        &:hover {
+          background-color: #9e0000;
+        }
+      }
+    }
+  }
+
+  & input {
+    border: none;
+    outline: none;
+  }
+
+  & p {
+    color: black;
+    cursor: pointer;
+  }
+
+  &:hover p {
+    color: $mainColor;
+  }
+
+  &:hover .project {
+    border: 2px solid #b866b5;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .projCard {
+    font-size: 1em;
+
+    .project {
+      height: 180px;
+      width: 260px;
+    }
+
+    .dropBtn {
+      top: 8px;
+      right: 8px;
+      border: 0.6px solid #c9c9c9;
+      border-radius: 6px;
+    }
+  }
+}

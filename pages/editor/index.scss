@@ -1,0 +1,9 @@
+@import "../../utils/styles/variables.scss";
+
+.editor {
+  position: relative;
+  min-height: 100dvh;
+  min-width: 100dvw;
+  display: flex;
+  flex-wrap: wrap;
+}

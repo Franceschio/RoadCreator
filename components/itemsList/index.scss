@@ -1,0 +1,50 @@
+@import "../../utils/styles/variables.scss";
+
+.itemsList {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  transition: 0.8s;
+  border-radius: 10px;
+
+  .tool {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 4px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    input {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  .tool:hover {
+    background-color: $mainColor;
+  }
+}

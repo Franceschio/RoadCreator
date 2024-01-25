@@ -1,0 +1,61 @@
+@import "../../utils/styles/variables.scss";
+
+.newProjCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 4px;
+  font-weight: 100;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.8s;
+  font-size: 0.8em;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  .newProject {
+    border: 1px solid $mainColor;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8em;
+    height: 100px;
+    width: 150px;
+    border-radius: 8px;
+    transition: 0.8s;
+    user-select: none;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  &:hover .newProject {
+    border: 2px solid $mainColor;
+    color: $mainColor;
+  }
+
+  & p {
+    color: black;
+  }
+
+  &:hover p {
+    color: $mainColor;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .newProjCard {
+    font-size: 1em;
+
+    .newProject {
+      height: 180px;
+      width: 260px;
+    }
+  }
+}

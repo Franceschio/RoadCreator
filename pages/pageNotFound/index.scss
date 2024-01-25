@@ -1,0 +1,15 @@
+@import "../../utils/styles/variables.scss";
+
+.pageNotFound {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  & p {
+    color: red;
+  }
+}
