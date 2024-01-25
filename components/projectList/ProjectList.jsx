@@ -1,7 +1,7 @@
 import "./index.scss";
 //State
 import { useEffect, useState } from "react";
-import NewProject from "../public/Images/NewProject.png";
+import NewProject from "../../public/Images/NewProject.png";
 import { v4 as uuidv4 } from "uuid";
 
 //Components

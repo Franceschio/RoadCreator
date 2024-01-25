@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { useEffect, useState, useRef } from "react";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
-import NewProject from "../public/Images/NewProject.png";
+import NewProject from "../../public/Images/NewProject.png";
 import HamburgerMenu from "../../components/hamburgerMenu/HamburgerMenu";
 import DraggableShape from "../../components/draggableShape/DraggableShape";
 import DraggableText from "../../components/draggableText/DraggableText";
