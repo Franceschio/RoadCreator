@@ -37,7 +37,7 @@ const ProjectList = () => {
       {
         id: id,
         title: "",
-        coverImg: "/public/Images/NewProject.png",
+        coverImg: "/Images/NewProject.png",
         shapes: [],
         sizes: [],
         rotations: [],
