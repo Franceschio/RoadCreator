@@ -21,6 +21,10 @@ const ProjectList = () => {
     JSON.parse(localStorage.getItem("existingProjects"))
   );
 
+  const [projDetails, setProjDetails] = useState(
+    JSON.parse(localStorage.getItem("existingProjects"))
+  );
+
   const [cards, setCards] = useState(existingProjects);
 
   if (!localStorage.getItem("ids")) {
@@ -38,7 +42,7 @@ const ProjectList = () => {
       {
         id: id,
         title: "",
-        coverImg: NewProject,
+        coverImg: projDetails.coverImg ? projDetails.coverImg : NewProject,
         shapes: [],
         sizes: [],
         rotations: [],
