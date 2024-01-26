@@ -5,6 +5,7 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
+  Navigate,
 } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<App />} />
+      <Route path="/editor" element={<Navigate to="/" />} />
       <Route path="/editor/:id" element={<Editor />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
