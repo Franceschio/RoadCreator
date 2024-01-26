@@ -88,13 +88,15 @@ const DraggableText = ({
           </div>
         </div>
         {inputs[index] ? (
-          <form onSubmit={(e) => handleBlur(e, index)}>
-            <input
-              type="text"
-              ref={inputRef}
-              onBlur={(e) => handleBlur(e, index)}
-            />
-          </form>
+          <div className="cancel">
+            <form onSubmit={(e) => handleBlur(e, index)}>
+              <input
+                type="text"
+                ref={inputRef}
+                onBlur={(e) => handleBlur(e, index)}
+              />
+            </form>
+          </div>
         ) : (
           <p
             style={{
