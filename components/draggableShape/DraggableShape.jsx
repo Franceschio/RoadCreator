@@ -41,7 +41,10 @@ const DraggableShape = ({
                 alt="delete shape"
               />
             </div>
-            <div className="miniTool color" onClick={() => setNewColor(index)}>
+            <div
+              className="miniTool color"
+              onClick={() => setNewColor(shape, index)}
+            >
               <img
                 src="https://cdn2.iconfinder.com/data/icons/css-vol-1/24/color-bucket-512.png"
                 alt="set colors"
@@ -65,7 +68,7 @@ const DraggableShape = ({
                 alt="set size+"
               />
             </div>
-            {shape.shapeName !== "circle" && (
+            {shape !== "circle" && (
               <div className="miniTool rotate" onClick={() => rotate(index)}>
                 <img
                   src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-7/32/rotate--clockwise-512.png"
@@ -76,9 +79,9 @@ const DraggableShape = ({
           </div>
         </div>
         <div
-          className={shape.shapeName}
+          className={shape}
           style={
-            shape.shapeName == "square" || shape.shapeName == "circle"
+            shape == "square" || shape == "circle"
               ? {
                   transform: `rotate(${rotations[index]}deg)`,
                   width: `${size[index]}px`,

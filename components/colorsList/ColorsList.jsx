@@ -6,6 +6,7 @@ const ColorsList = ({
   chooser,
   setChooser,
   actualColorIndex,
+  actualColorShape,
   setColors,
   isText,
   setTextColors,
@@ -47,42 +48,50 @@ const ColorsList = ({
         </div>
         {!isText && (
           <>
-            <h3>Colore bordo</h3>
-            <div className="colorsList">
-              <div
-                className="color black"
-                onClick={() => setNewColor("black", "border")}
-              ></div>
-              <div
-                className="color red"
-                onClick={() => setNewColor("red", "border")}
-              ></div>
-              <div
-                className="color blue"
-                onClick={() => setNewColor("blue", "border")}
-              ></div>
-              <div
-                className="color yellow"
-                onClick={() => setNewColor("yellow", "border")}
-              ></div>
-              <div
-                className="color green"
-                onClick={() => setNewColor("green", "border")}
-              ></div>
-              <div
-                className="color orange"
-                onClick={() => setNewColor("orange", "border")}
-              ></div>
-              <div
-                className="color violet"
-                onClick={() => setNewColor("#a259a0", "border")}
-              ></div>
-              <div
-                className="color pink"
-                onClick={() => setNewColor("pink", "border")}
-              ></div>
-            </div>
-            <h3>Colore sfondo</h3>
+            {actualColorShape !== "line" && actualColorShape !== "arrow" && (
+              <>
+                <h3>Colore bordo</h3>
+                <div className="colorsList">
+                  <div
+                    className="color black"
+                    onClick={() => setNewColor("black", "border")}
+                  ></div>
+                  <div
+                    className="color red"
+                    onClick={() => setNewColor("red", "border")}
+                  ></div>
+                  <div
+                    className="color blue"
+                    onClick={() => setNewColor("blue", "border")}
+                  ></div>
+                  <div
+                    className="color yellow"
+                    onClick={() => setNewColor("yellow", "border")}
+                  ></div>
+                  <div
+                    className="color green"
+                    onClick={() => setNewColor("green", "border")}
+                  ></div>
+                  <div
+                    className="color orange"
+                    onClick={() => setNewColor("orange", "border")}
+                  ></div>
+                  <div
+                    className="color violet"
+                    onClick={() => setNewColor("#a259a0", "border")}
+                  ></div>
+                  <div
+                    className="color pink"
+                    onClick={() => setNewColor("pink", "border")}
+                  ></div>
+                </div>
+              </>
+            )}
+            {actualColorShape !== "line" && actualColorShape !== "arrow" ? (
+              <h3>Colore sfondo</h3>
+            ) : (
+              <h3>Colore</h3>
+            )}
             <div className="colorsList">
               <div
                 className="color transparent"

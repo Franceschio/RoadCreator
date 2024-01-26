@@ -127,6 +127,8 @@ const Editor = () => {
 
   const [actualColorIndex, setActualColorIndex] = useState(0);
 
+  const [actualColorShape, setActualColorShape] = useState("");
+
   //imgsCard
   const [image, setImage] = useState(
     actualProj.image ? actualProj.image : NewProject
@@ -188,7 +190,8 @@ const Editor = () => {
 
   //Colori
 
-  const setNewColor = (index) => {
+  const setNewColor = (shape, index) => {
+    setActualColorShape(() => shape);
     setActualColorIndex(() => index);
     setIsText(() => false);
     setActiveChooser(() => true);
@@ -252,12 +255,7 @@ const Editor = () => {
 
   // Aggiungi nuovi Draggable
   const addShape = (shapeName) => {
-    setShapes((prevShapes) => [
-      {
-        shapeName: shapeName,
-      },
-      ...prevShapes,
-    ]);
+    setShapes((prevShapes) => [shapeName, ...prevShapes]);
     setRotations((prevRotations) => [0, ...prevRotations]);
     setSize(() => [100, ...size]);
     setPositions((prev) => [{ x: 0, y: 0 }, ...prev]);
@@ -504,6 +502,7 @@ const Editor = () => {
         chooser={chooser}
         setChooser={setActiveChooser}
         actualColorIndex={actualColorIndex}
+        actualColorShape={actualColorShape}
         setColors={setColors}
         isText={isText}
         setTextColors={setTextColors}
